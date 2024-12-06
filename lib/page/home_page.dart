@@ -38,18 +38,18 @@ class _HomePageState extends State<HomePage> {
                       text: TextSpan(
                         children: [
                           TextSpan(
-                            text: 'Will you have',
+                            text: 'Quieres',
                             style: txtHeading,
                           ),
                           TextSpan(
-                            text: '\nsome more',
+                            text: '\nmás',
                             style: txtHeading.copyWith(
                               color: grayColor,
                               fontWeight: FontWeight.w300,
                             ),
                           ),
                           TextSpan(
-                            text: '\ncake',
+                            text: '\nPastél?',
                             style: txtHeading.copyWith(
                               color: black,
                             ),
@@ -68,9 +68,9 @@ class _HomePageState extends State<HomePage> {
               Expanded(
                 flex: 2,
                 child: ListView.builder(
-                    padding: EdgeInsets.only(top: 50.0),
+                    padding: const EdgeInsets.only(top: 50.0),
                     itemCount: cakes.length,
-                    physics: BouncingScrollPhysics(),
+                    physics: const BouncingScrollPhysics(),
                     scrollDirection: Axis.horizontal,
                     itemBuilder: (itemBuilder, index) {
                       return GestureDetector(
@@ -85,8 +85,8 @@ class _HomePageState extends State<HomePage> {
                       );
                     }),
               ),
-              Text(
-                'Recommended',
+              const Text(
+                'Recomendado',
                 style: TextStyle(
                   fontSize: 21.0,
                   color: black,

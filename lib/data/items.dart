@@ -23,43 +23,84 @@ class Cakes {
 
 List<Cakes> cakes = [
   Cakes(
-    name: 'Princess Birthday Cake',
-    flavourl: 'Creamy',
+    name: 'Cupcake de Pito Huayaca',
+    flavourl: 'Tradicional',
     price: '250.60',
-    image: 'assets/images/01.png',
+    image: 'assets/products/01.jpg',
     bgColor: pink01,
     destription:
-        'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Quis ipsum suspendisse ultrices gravida. Risus commodo viverra maecenas accumsan lacus vel facilisis. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Quis ipsum suspendisse ultrices gravida. Risus commodo viverra maecenas accumsan lacus vel facilisis. ',
+        'Delicioso bizcocho de pito huayaca con un relleno exótico de tumbo, que combina lo mejor de la tradición y el sabor tropical.',
     rating: 4.5,
   ),
   Cakes(
-    name: 'Birthday Cake',
-    flavourl: 'Creamy',
-    image: 'assets/images/02.png',
+    name: 'Bombones Rellenos de Motacú',
+    flavourl: 'Exótico',
     price: '220.60',
+    image: 'assets/products/02.jpg',
     bgColor: pink01,
     destription:
-        'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Quis ipsum suspendisse ultrices gravida. Risus commodo viverra maecenas accumsan lacus vel facilisis. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Quis ipsum suspendisse ultrices gravida. Risus commodo viverra maecenas accumsan lacus vel facilisis.  ',
+        'Pequeños bombones con un corazón relleno de motacú, perfectos para disfrutar un toque dulce y tropical.',
     rating: 4,
   ),
   Cakes(
-    name: 'Wedding Cake',
-    flavourl: 'Creamy',
+    name: 'Entremet de Mango y Aricoma',
+    flavourl: 'Gourmet',
     price: '450.60',
-    image: 'assets/images/03.png',
+    image: 'assets/products/03.jpg',
     bgColor: pink01,
     destription:
-        'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Quis ipsum suspendisse ultrices gravida. Risus commodo viverra maecenas accumsan lacus vel facilisis.Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Quis ipsum suspendisse ultrices gravida. Risus commodo viverra maecenas accumsan lacus vel facilisis.  ',
-    rating: 2.5,
+        'Un elegante postre en capas, compuesto de mousse de mango, gelatina de aricoma y un delicado bizcocho. Perfecto para ocasiones especiales.',
+    rating: 4.5,
   ),
   Cakes(
-    name: 'Cup Cake',
-    flavourl: 'Creamy',
-    image: 'assets/images/04.png',
+    name: 'Torta Tres Leches',
+    flavourl: 'Clásico',
     price: '850.60',
+    image: 'assets/products/04.jpeg',
     bgColor: pink01,
     destription:
-        'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Quis ipsum suspendisse ultrices gravida. Risus commodo viverra maecenas accumsan lacus vel facilisis. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Quis ipsum suspendisse ultrices gravida. Risus commodo viverra maecenas accumsan lacus vel facilisis. ',
+        'Bizcocho suave y esponjoso, humedecido con una mezcla de tres leches: evaporada, condensada y leche natural. Un clásico irresistible.',
     rating: 5,
   ),
+  Cakes(
+    name: 'Tartaletas de Frutilla',
+    flavourl: 'Frutal',
+    price: '350.60',
+    image: 'assets/products/05.jpeg',
+    bgColor: pink01,
+    destription:
+        'Tartaletas de masa quebrada perfectamente horneada, con un delicioso relleno de crema suave y frutillas frescas.',
+    rating: 4.5,
+  ),
+  Cakes(
+    name: 'Relleno Crema Bariloche',
+    flavourl: 'Chocolate',
+    price: '150.60',
+    image: 'assets/products/06.jpg',
+    bgColor: pink01,
+    destription:
+        'Exquisita crema de chocolate con una textura suave y un sabor intenso, ideal para cualquier postre.',
+    rating: 4.2,
+  ),
+  Cakes(
+    name: 'Relleno Budín de Chocolate',
+    flavourl: 'Chocolate',
+    price: '180.60',
+    image: 'assets/products/07.jpg',
+    bgColor: pink01,
+    destription:
+        'Postre elaborado a base de chocolate, con una textura densa y un sabor profundo, perfecto para los amantes del cacao.',
+    rating: 4.8,
+  ),
+  Cakes(
+    name: 'Relleno Crema Pastelera de Moras',
+    flavourl: 'Frutal',
+    price: '200.60',
+    image: 'assets/products/08.jpeg',
+    bgColor: pink01,
+    destription:
+        'Una crema pastelera suave con un toque dulce y ácido de moras frescas, ideal para acompañar postres únicos.',
+    rating: 4.7,
+  ),
 ];
+

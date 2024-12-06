@@ -11,9 +11,9 @@ class Categories {
 }
 
 List<Categories> categories = [
-  Categories(id: 0, name: 'Cakes', image: 'assets/icons/birthday-cake.svg'),
+  Categories(id: 0, name: 'Pasteles', image: 'assets/icons/birthday-cake.svg'),
   Categories(id: 1, name: 'Cup Cakes', image: 'assets/icons/cake.svg'),
-  Categories(id: 2, name: 'Cakes', image: 'assets/icons/cupcake.svg'),
-  Categories(id: 3, name: 'Cakes', image: 'assets/icons/donut.svg'),
-  Categories(id: 4, name: 'Cakes', image: 'assets/icons/cake01.svg'),
+  Categories(id: 2, name: 'Bombones', image: 'assets/icons/cupcake.svg'),
+  Categories(id: 3, name: 'Postres', image: 'assets/icons/donut.svg'),
+  Categories(id: 4, name: 'Tartaletas', image: 'assets/icons/cake01.svg'),
 ];

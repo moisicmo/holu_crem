@@ -21,6 +21,7 @@ class _DetailPageState extends State<DetailPage> {
   Widget build(BuildContext context) {
     final height = MediaQuery.of(context).size.height;
     return Scaffold(
+      backgroundColor: white,
       body: SafeArea(
         child: Stack(
           children: [
@@ -29,14 +30,14 @@ class _DetailPageState extends State<DetailPage> {
               child: Container(
                 height: height / 2,
                 width: 360.0,
-                padding: EdgeInsets.symmetric(horizontal: 20.0),
-                decoration: BoxDecoration(
-                  color: pink02,
-                  borderRadius: BorderRadius.only(
-                    bottomLeft: Radius.circular(50.0),
+                padding: const EdgeInsets.symmetric(horizontal: 20.0),
+                child: ClipRRect(
+                  borderRadius: BorderRadius.circular(35.0),
+                  child: Image.asset(
+                    widget.cake.image,
+                    fit: BoxFit.fitWidth,
                   ),
                 ),
-                child: Image.asset(widget.cake.image),
               ),
             ),
             Positioned(
@@ -52,12 +53,12 @@ class _DetailPageState extends State<DetailPage> {
                       fontSize: 22.0,
                     ),
                   ),
-                  SizedBox(height: 10.0),
+                  const SizedBox(height: 10.0),
                   Row(
                     children: [
                       StarRating(rating: widget.cake.rating),
                       Text('${widget.cake.rating}'),
-                      SizedBox(width: 120.0),
+                      const SizedBox(width: 120.0),
                       miniButton(
                         onTap: () {
                           if (qty > 1) setState(() => qty--);
@@ -79,8 +80,8 @@ class _DetailPageState extends State<DetailPage> {
                       ),
                     ],
                   ),
-                  SizedBox(height: 20.0),
-                  Container(
+                  const SizedBox(height: 20.0),
+                  SizedBox(
                     width: 360.0,
                     height: 200,
                     child: ListView(
@@ -102,6 +103,7 @@ class _DetailPageState extends State<DetailPage> {
                       ],
                     ),
                   ),
+                  const SizedBox(height: 20.0),
                   Container(
                     height: 60.0,
                     width: 360.0,
@@ -116,11 +118,11 @@ class _DetailPageState extends State<DetailPage> {
                       mainAxisAlignment: MainAxisAlignment.spaceBetween,
                       children: [
                         Text(
-                          'Add to cart',
+                          'Agregar al carrito',
                           style: txtBtnCategory.copyWith(color: mainColor),
                         ),
                         roundButton(
-                          text: '\$${widget.cake.price}',
+                          text: 'Bs. ${widget.cake.price}',
                           fontsize: 14,
                         )
                       ],

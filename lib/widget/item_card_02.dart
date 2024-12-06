@@ -6,7 +6,7 @@ import 'package:holu_crem/widget/round_btn.dart';
 
 class ItemCard02 extends StatelessWidget {
   final Cakes cake;
-  const ItemCard02({Key? key, required this.cake}) : super(key: key);
+  const ItemCard02({super.key, required this.cake});
 
   @override
   Widget build(BuildContext context) {
@@ -17,12 +17,12 @@ class ItemCard02 extends StatelessWidget {
           child: Container(
             height: 80.0,
             width: 250.0,
-            margin: EdgeInsets.only(right: 15.0, left: 10.0),
-            padding: EdgeInsets.only(bottom: 20.0, left: 10.0),
+            margin: const EdgeInsets.only(right: 15.0, left: 10.0),
+            padding: const EdgeInsets.only(bottom: 20.0, left: 10.0),
             decoration: BoxDecoration(
                 borderRadius: BorderRadius.circular(20.0),
                 color: white,
-                boxShadow: [
+                boxShadow: const [
                   BoxShadow(
                     color: blackShadow,
                     offset: Offset(0, 5),
@@ -32,27 +32,22 @@ class ItemCard02 extends StatelessWidget {
           ),
         ),
         Container(
-          height: 80.0,
+          height: 100.0,
           width: 80.0,
-          margin: EdgeInsets.only(right: 15.0, left: 10.0),
-          padding: EdgeInsets.all(5),
-          decoration: BoxDecoration(
-            borderRadius: BorderRadius.only(
-              topLeft: Radius.circular(10.0),
-              topRight: Radius.circular(10.0),
-              bottomRight: Radius.circular(10.0),
-            ),
-            color: pink02,
-          ),
-          child: Image.asset(
-            cake.image,
-            scale: 2,
-          ),
+          margin: const EdgeInsets.only(right: 15.0, left: 10.0),
+          child: ClipRRect(
+                borderRadius: BorderRadius.circular(25.0),
+                child: Image.asset(
+                  cake.image,
+                  fit: BoxFit.fitWidth,
+                  scale: 2,
+                ),
+              ),
         ),
         Positioned(
           right: 25.0,
           bottom: 10.0,
-          child: Container(
+          child: SizedBox(
             width: 150.0,
             child: Column(
               mainAxisAlignment: MainAxisAlignment.end,
@@ -67,7 +62,7 @@ class ItemCard02 extends StatelessWidget {
                   ),
                 ),
                 Text(
-                  'Flavor: ${cake.flavourl}',
+                  'Sabor: ${cake.flavourl}',
                   maxLines: 1,
                   style: txtItemCard.copyWith(
                     fontSize: 12,
@@ -82,7 +77,7 @@ class ItemCard02 extends StatelessWidget {
                       text: TextSpan(
                         children: [
                           TextSpan(
-                            text: '\$',
+                            text: 'Bs. ',
                             style: txtHeading.copyWith(fontSize: 10.0),
                           ),
                           TextSpan(
