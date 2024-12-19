@@ -9,7 +9,7 @@ import 'package:holu_crem/widget/round_btn.dart';
 
 class DetailPage extends StatefulWidget {
   final Cakes cake;
-  const DetailPage({Key? key, required this.cake}) : super(key: key);
+  const DetailPage({super.key, required this.cake});
 
   @override
   _DetailPageState createState() => _DetailPageState();
@@ -40,9 +40,7 @@ class _DetailPageState extends State<DetailPage> {
                 ),
               ),
             ),
-            Positioned(
-              bottom: 0,
-              right: 0,
+            Positioned.fill(
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
@@ -81,12 +79,9 @@ class _DetailPageState extends State<DetailPage> {
                     ],
                   ),
                   const SizedBox(height: 20.0),
-                  SizedBox(
-                    width: 360.0,
-                    height: 200,
-                    child: ListView(
-                      padding: EdgeInsets.only(bottom: 50.0),
-                      physics: BouncingScrollPhysics(),
+                  ListView(
+                      padding: const EdgeInsets.only(bottom: 50.0),
+                      physics: const BouncingScrollPhysics(),
                       children: [
                         ReadMoreText(
                           widget.cake.destription,
@@ -94,6 +89,7 @@ class _DetailPageState extends State<DetailPage> {
                           trimMode: TrimMode.Line,
                           colorClickableText: mainColor,
                           style: TextStyle(
+                            // ignore: deprecated_member_use
                             color: black.withOpacity(0.5),
                             height: 1.5,
                             fontSize: 16,
@@ -102,13 +98,24 @@ class _DetailPageState extends State<DetailPage> {
                         )
                       ],
                     ),
-                  ),
+                   Switch(
+      // This bool value toggles the switch.
+      value: true,
+      activeColor: Colors.red,
+      onChanged: (bool value) {
+        // This is called when the user toggles the switch.
+        // setState(() {
+        //   light = value;
+        // });
+      },
+    ),
+
                   const SizedBox(height: 20.0),
                   Container(
                     height: 60.0,
                     width: 360.0,
-                    padding: EdgeInsets.symmetric(horizontal: 20.0),
-                    decoration: BoxDecoration(
+                    padding: const EdgeInsets.symmetric(horizontal: 20.0),
+                    decoration: const BoxDecoration(
                       color: pink01,
                       borderRadius: BorderRadius.only(
                         topLeft: Radius.circular(20.0),
@@ -131,7 +138,7 @@ class _DetailPageState extends State<DetailPage> {
                 ],
               ),
             ),
-            CustomAppBar(),
+            const CustomAppBar(),
           ],
         ),
       ),
@@ -151,7 +158,7 @@ class _DetailPageState extends State<DetailPage> {
         radius: 12.0,
         child: Icon(
           icon,
-          color: iconColor != null ? iconColor : white,
+          color: iconColor ?? white,
           size: 15,
         ),
       ),

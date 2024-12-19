@@ -3,7 +3,8 @@ import 'package:holu_crem/core/color.dart';
 import 'package:holu_crem/core/text_style.dart';
 import 'package:holu_crem/data/category.dart';
 import 'package:holu_crem/data/items.dart';
-import 'package:holu_crem/page/details_page.dart';
+import 'package:holu_crem/page/details.dart';
+// import 'package:holu_crem/page/details_page.dart';
 import 'package:holu_crem/widget/Category_btn.dart';
 import 'package:holu_crem/widget/circurl_btn.dart';
 import 'package:holu_crem/widget/item_card.dart';
@@ -79,7 +80,7 @@ class _HomePageState extends State<HomePage> {
                               context,
                               MaterialPageRoute(
                                   builder: (builder) =>
-                                      DetailPage(cake: cakes[index])));
+                                      Details(cake: cakes[index])));
                         },
                         child: ItemCard(cake: cakes[index]),
                       );

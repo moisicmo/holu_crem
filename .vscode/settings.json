@@ -9,5 +9,6 @@
     "editorCursor.foreground": "#ffff00",
     "terminalCursor.foreground": "#ffff00",
     "editor.selectionBackground": "#555534"
-  }
+  },
+  "gitConfigUser.selectedProfile": "moisicmo"
 }
