@@ -65,27 +65,68 @@ class _HomePageState extends State<HomePage> {
                   ],
                 ),
               ),
-              categoryMenu(),
+              SizedBox(
+                height: 80.0,
+                child: SingleChildScrollView(
+                  scrollDirection: Axis.horizontal,
+                  child: Row(
+                    children: [
+                      for (var item in categories)
+                      GestureDetector(
+                        onTap: () {
+                          setState(() => selectIndex = item.id);
+                        },
+                        child: CategoryButton(
+                          category: item,
+                          index: selectIndex,
+                        ),
+                      ),
+                    ],
+                  ),
+                ),
+              ),
               Expanded(
                 flex: 2,
-                child: ListView.builder(
-                    padding: const EdgeInsets.only(top: 50.0),
-                    itemCount: cakes.length,
-                    physics: const BouncingScrollPhysics(),
-                    scrollDirection: Axis.horizontal,
-                    itemBuilder: (itemBuilder, index) {
-                      return GestureDetector(
-                        onTap: () {
-                          Navigator.push(
-                              context,
-                              MaterialPageRoute(
-                                  builder: (builder) =>
-                                      Details(cake: cakes[index])));
-                        },
-                        child: ItemCard(cake: cakes[index]),
-                      );
-                    }),
+                child: SingleChildScrollView(
+                  scrollDirection: Axis.horizontal,
+                  child: Row(
+                    children: [
+                      if (selectIndex == 0)
+                        for (var item in cakes)
+                        GestureDetector(
+                          onTap: () {
+                            Navigator.push(context, MaterialPageRoute(builder: (builder) => Details(cake: item)));
+                          },
+                          child: ItemCard(cake: item),
+                        ),
+                      if (selectIndex != 0)
+                      for (var item in cakes.where((cake) => cake.category == selectIndex))
+                        GestureDetector(
+                          onTap: () {
+                            Navigator.push(context, MaterialPageRoute(builder: (builder) => Details(cake: item)));
+                          },
+                          child: ItemCard(cake: item),
+                        ),
+                    ],
+                  ),
+                ),
               ),
+              // Expanded(
+              //   flex: 2,
+              //   child: ListView.builder(
+              //       padding: const EdgeInsets.only(top: 50.0),
+              //       itemCount: cakes.length,
+              //       physics: const BouncingScrollPhysics(),
+              //       scrollDirection: Axis.horizontal,
+              //       itemBuilder: (itemBuilder, index) {
+              //         return GestureDetector(
+              //           onTap: () {
+              //             Navigator.push(context, MaterialPageRoute(builder: (builder) => Details(cake: cakes[index])));
+              //           },
+              //           child: ItemCard(cake: cakes[index]),
+              //         );
+              //       }),
+              // ),
               const Text(
                 'Recomendado',
                 style: TextStyle(
@@ -111,28 +152,6 @@ class _HomePageState extends State<HomePage> {
           ),
         ),
       ),
-    );
-  }
-
-  categoryMenu() {
-    return Container(
-      height: 80.0,
-      child: ListView.builder(
-          physics: BouncingScrollPhysics(),
-          scrollDirection: Axis.horizontal,
-          itemCount: categories.length,
-          itemBuilder: (itemBuilder, index) {
-            final category = categories[index];
-            return GestureDetector(
-              onTap: () {
-                setState(() => selectIndex = index);
-              },
-              child: CategoryButton(
-                category: category,
-                index: selectIndex,
-              ),
-            );
-          }),
     );
   }
 }

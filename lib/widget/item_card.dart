@@ -81,13 +81,16 @@ class ItemCard extends StatelessWidget {
             top: 0,
             right: 0,
             child: SizedBox(
-              height: 130.0,
+              height: 180.0,
               width: 220.0,
-              child: ClipRRect(
-                borderRadius: BorderRadius.circular(25.0),
-                child: Image.asset(
-                  cake.image,
-                  fit: BoxFit.fitWidth,
+              child: Hero(
+                tag:cake.name,
+                child: ClipRRect(
+                  borderRadius: BorderRadius.circular(25.0),
+                  child: Image.asset(
+                    cake.image,
+                    fit: BoxFit.cover,
+                  ),
                 ),
               ),
             ),

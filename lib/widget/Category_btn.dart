@@ -5,7 +5,7 @@ import 'package:holu_crem/core/text_style.dart';
 import 'package:holu_crem/data/category.dart';
 
 class CategoryButton extends StatelessWidget {
-  final Categories category;
+  final Category category;
   final int index;
   const CategoryButton({
     Key? key,
